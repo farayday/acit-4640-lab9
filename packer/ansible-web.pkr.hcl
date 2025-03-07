@@ -15,8 +15,6 @@ Packer:
 
 packer {
   required_plugins {
-    # COMPLETE ME
-    # add necessary plugins for ansible and aws
     ansible {
       version = ">= 1.1.2"
       source  = "github.com/hashicorp/ansible"
@@ -25,6 +23,7 @@ packer {
       version = ">= 1.3.4"
       source  = "github.com/hashicorp/amazon"
     }
+  }
 }
 
 source "amazon-ebs" "ubuntu" {
