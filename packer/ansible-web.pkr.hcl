@@ -1,6 +1,3 @@
-Complete the Packer("ansible-web.pkr.hcl) and Terraform("main.tf") configuration files. Look for the "#COMPLETE ME" comments.
-
-
 
 packer {
   required_plugins {
