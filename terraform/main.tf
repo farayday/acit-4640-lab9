@@ -21,7 +21,21 @@ locals {
 # get the most recent version of your AMI created with packer template
 # https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/ami
 data "aws_ami" "ubuntu" {
-  # COMPLETE ME
+  filter = {
+    name = "name"
+    values = ["packer-ansible-nginx"]
+  }
+
+  filter {
+    name   = "root-device-type"
+    values = ["ebs"]
+  }
+
+  filter = {
+    name = "virtualization-type"
+    values = ["hvm"]
+  }
+
 }
 
 # Create a VPC
